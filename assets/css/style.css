@@ -138,7 +138,7 @@ html {
     position: relative;
     padding-top: 50%;
     margin-top: 46.5px;
-    background: url(./assets/img/slide-img/ny.jpeg) top center / cover no-repeat;
+    background: url(/assets/img/slide-img/ny.jpeg) top center / cover no-repeat;
 }
 #slide .slide-content {
     position: absolute;
