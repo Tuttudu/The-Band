@@ -578,6 +578,12 @@ label.modal-label {
         background-color: #333;
         padding: 5px 40px;
     }
+
+    #slide .img-title,
+    #slide .img-description {
+        display: none;
+    }
+
     #content .member-list {
         padding-top: 16px;
     }
