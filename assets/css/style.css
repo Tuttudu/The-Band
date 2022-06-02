@@ -47,6 +47,11 @@ html {
 .text-center {
     text-align: center !important; 
 }
+
+.mt-16 {
+    margin-top: 16px !important; 
+}
+
 /*
 1. Tu ngoai vao trong
 2. Tu tren xuong duoi
@@ -60,7 +65,7 @@ html {
 */
 /* Main */
 #header {
-    height: 46.5px;
+    height: 46px;
     background-color: black;
     position: fixed;
     top: 0;
@@ -107,8 +112,8 @@ html {
 }
 #nav li a {
     text-decoration: none;
-    line-height: 46.5px;
-    display: inline-block;
+    line-height: 46px;
+    display: block;
     font-size: 15px;
 }
 
@@ -117,15 +122,35 @@ html {
     color: #000;
     background-color: #ccc;
 }
+
+#header .mobile-menu-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+#header .mobile-menu-icon,
 #header .search-icon {
     float: right;
 }
+
+#header .mobile-menu-sym,
 #header .search-sym {
     color: white;
-    line-height: 46.5px;
+    line-height: 46px;
     padding: 0 23px;
     font-size: 20px;
 }
+
+#header .mobile-menu-icon:hover {
+    background-color: #ccc;
+}
+
+#header .mobile-menu-icon:hover > i {
+    color: #000;
+}
+
 #header .search-icon:hover {
     background-color: #f44336;
     cursor: pointer;
@@ -134,8 +159,9 @@ html {
 #slide {
     position: relative;
     padding-top: 50%;
-    margin-top: 46.5px;
+    margin-top: 46px;
     background: url(../img/slide-img/ny.jpeg) top center / cover no-repeat;
+    text-shadow: 0 0 1px black;
 }
 #slide .slide-content {
     position: absolute;
@@ -156,10 +182,13 @@ html {
 /* Content */
 #content .content-section {
     width: 800px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding-top: 74px;
     padding-bottom: 96px;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 #content .main-heading {
     font-weight: 500;
@@ -181,7 +210,7 @@ html {
     font-size: 15px;
 }
 #content .member-list {
-    padding-top: 62px;
+    padding-top: 46px;
 }
 
 #content .member-img {
@@ -227,7 +256,7 @@ html {
 }
 
 .tour-list {
-    margin-top: 32px;
+    margin-top: 16px;
 }
 
 
@@ -266,9 +295,11 @@ html {
     background-color: black;
     color: white;
     text-decoration: none;
-    padding: 8px 16px;
+    padding: 11px 16px;
     display: inline-block;
     border: none;
+    text-align: center;
+    font-size: 15px;
 }
 .buy-tickets-button:hover {
     background-color: #ccc;
@@ -380,7 +411,13 @@ label.modal-label {
     font-size: 18px;
     line-height: 1.5;
 }
-
+.contact-infor a {
+    color: #101aef;
+    opacity: 0.8;
+}
+.contact-infor a:hover {
+    opacity: 1;
+}
 .contact-infor i {
     width: 30px;
     display: inline-block;
@@ -404,6 +441,7 @@ label.modal-label {
     color: white;
     padding: 12px 17px;
     margin-top: 8px;
+    -webkit-appearance: none;
 }
 
 .contact-form .contact-send-btn:hover {
@@ -454,5 +492,102 @@ label.modal-label {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* Reponsive */
+
+/* Tablet & Mobile */
+@media (max-width: 63.9375em) {
+    #nav .subnav a {
+        padding: 6px 12px;
+    }
+    .tour-list .buy-tickets-button {
+        padding: 16px 16px;
+    }
+    .contact-form .form-control {
+        padding: 15px;
+        font-size: 16px;
+    }
+    .contact-form .contact-send-btn {
+        padding: 16px 17px;
+    }
+    .contact-infor {
+        line-height: 2;
+    }
+    .socials-list {
+        font-size: 48px;
+    }
+    #footer .socials-icon {
+        font-size: 28px;
+    }
+    #footer .copyright {
+        padding: 16px;
+    }
+    .contact-submit-btn {
+        font-size: 16px;
+    }
+}
+
+
+
+/* Tablet */
+
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+}
+
+/* Mobile */
+
+@media (max-width: 46.1875em) {
+    .full-width,
+    .s-col-full {
+        width: 100%;
+    }
+
+    #header {
+        overflow: hidden;
+    }
+
+    #header .mobile-menu-icon {
+        display: block;
+    }
+    
+    #header .search-icon {
+        display: none;
+    }
+
+    #nav {
+        display: block;
+    }
+
+    #nav > li:first-child {
+        display: inline-block;
+    }
+
+    #nav > li  {
+        display: block;
+    }
+    #nav .subnav {
+        position: initial;
+    }
+    #nav .subnav li {
+        display: block;
+    }
+    #nav .subnav a {
+        color: white;
+        background-color: #333;
+        padding: 5px 40px;
+    }
+    #content .member-list {
+        padding-top: 16px;
+    }
+    #content .member-name {
+        margin-top: 30px;
+    }
+    #content .member-img {
+        width: 60%;
+    }
+    .contact-form {
+        margin-top: 32px;
     }
 }
